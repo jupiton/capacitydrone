@@ -1,0 +1,2 @@
+can you create the page contact.tsx, relative menu contact
+add the link contact.tsx to href="#contact"

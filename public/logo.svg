@@ -1,0 +1,11 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Corps principal du drone -->
+  <path d="M20 15L25 20L20 25L15 20L20 15Z" fill="#3B82F6" />
+  <!-- Bras du drone -->
+  <path d="M8 8L15 15M25 25L32 32M8 32L15 25M25 15L32 8" stroke="#3B82F6" strokeWidth="2" />
+  <!-- Hélices -->
+  <circle cx="8" cy="8" r="3" fill="#60A5FA" />
+  <circle cx="32" cy="8" r="3" fill="#60A5FA" />
+  <circle cx="8" cy="32" r="3" fill="#60A5FA" />
+  <circle cx="32" cy="32" r="3" fill="#60A5FA" />
+</svg> 
