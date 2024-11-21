@@ -8,8 +8,20 @@ const Home = () => {
       <Navigation />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source 
+              src="https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/linkedin.mp4" 
+              type="video/mp4" 
+            />
+          </video>
+          
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-    
           <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-blue-900/20 to-black"></div>
         </div>
 
