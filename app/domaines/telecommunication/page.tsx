@@ -33,7 +33,7 @@ const TelecomDroneApplications = () => {
 
         <div className="relative z-30 max-w-6xl mx-auto px-4 text-center">
           <div className="space-y-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
               Télécommunication Visée FH & Jumeaux Numériques Panoramiques 360° par Drone
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">

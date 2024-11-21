@@ -11,6 +11,21 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/domaines/chantier/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/domaines/chantier/page.js"
+    ],
+    "/domaines/photovoltaique/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/domaines/photovoltaique/page.js"
+    ],
+    "/domaines/telecommunication/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/domaines/telecommunication/page.js"
+    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
