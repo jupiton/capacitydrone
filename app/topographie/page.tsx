@@ -1,16 +1,46 @@
+'use client'
+
+import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
 import Link from 'next/link';
 
+const images = [
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/topographie1.jpg",
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/topographie2.jpg"
+];
+
 const TopographiePage = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
       <Navigation />
-      {/* Hero Section avec vidéo */}
+      {/* Hero Section avec carrousel */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {/* Vidéo en arrière-plan */}
+          {/* Carrousel en arrière-plan */}
+          <div className="relative h-full w-full">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Topographie ${index + 1}`}
+                className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
+                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+            ))}
+          </div>
+          
+          {/* Overlays */}
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          {/* Gradient overlay */}
           <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
         </div>
 
