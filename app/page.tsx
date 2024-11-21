@@ -139,27 +139,27 @@ const Home = () => {
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-gray-900/50">
-        <div className="max-w-6xl mx-auto px-4">
-        <h2 className="md:text-4xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="md:text-4xl font-bold mb-12 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Pourquoi Choisir CAPACITY DRONE ?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Expertise & Innovation",
-                description: "Notre expérience et les technologies les plus récentes pour des services sur mesure avec une qualité d'image incomparable."
+                description: "Notre expertise technique combinée aux technologies de pointe nous permet de délivrer des prestations sur mesure avec une qualité d'image exceptionnelle."
               },
               {
                 title: "Flexibilité & Réactivité",
-                description: "Une approche adaptée à chaque projet unique avec une réponse rapide et efficace à vos demandes."
+                description: "Notre approche personnalisée et notre organisation flexible nous permettent de répondre rapidement à vos besoins avec des solutions adaptées à chaque situation."
               },
               {
                 title: "Sécurité & Conformité",
-                description: "Des pilotes certifiés respectant les normes en vigueur pour des missions réalisées en toute sécurité."
+                description: "Notre équipe de pilotes certifiés assure des missions en totale conformité avec la réglementation, garantissant sécurité et professionnalisme à chaque intervention."
               }
             ].map((feature, index) => (
-              <div key={index} className="p-6 border border-blue-500/20 rounded-xl backdrop-blur-sm hover:border-blue-500/40 transition-all">
-                <h3 className="text-xl font-semibold mb-3 text-blue-300">{feature.title}</h3>
+              <div key={index} className="p-6 border border-blue-500/20 rounded-xl backdrop-blur-sm hover:border-blue-500/40 transition-all flex flex-col items-center text-center h-full">
+                <h3 className="text-xl font-semibold mb-4 text-blue-300">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
               </div>
             ))}
