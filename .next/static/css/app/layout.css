@@ -703,6 +703,9 @@ video {
 .animate-bounce {
   animation: bounce 1s infinite;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 .list-inside {
   list-style-position: inside;
 }

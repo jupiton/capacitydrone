@@ -1,5 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import ScrollArrow from '../components/ScrollArrow';
+import ScrollButton from '../components/ScrollButton';
 
 const ContactPage = () => {
     return (
@@ -7,7 +9,7 @@ const ContactPage = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center">
           {/* Background Image */}
           <div className="absolute inset-0 z-0 bg-gray-800">
             <img
@@ -27,14 +29,14 @@ const ContactPage = () => {
               Nous sommes là pour répondre à vos besoins
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-                Envoyer un message
-              </button>
+              <ScrollButton />
               <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
                 En savoir plus
               </button>
             </div>
           </div>
+
+          <ScrollArrow />
         </section>
 
         {/* Contact Form Section */}
@@ -50,17 +52,17 @@ const ContactPage = () => {
                       {
                         icon: "📍",
                         title: "Adresse",
-                        content: "123 Rue des Drones, 75000 Paris"
+                        content: "16 rue du pontet 69360 St Symphorien d Ozon"
                       },
                       {
                         icon: "📞",
                         title: "Téléphone",
-                        content: "+33 1 23 45 67 89"
+                        content: "06 62 99 81 08"
                       },
                       {
                         icon: "📧",
                         title: "Email",
-                        content: "contact@capacity-drone.com"
+                        content: "contact@capacity-drone.fr"
                       }
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-4">
