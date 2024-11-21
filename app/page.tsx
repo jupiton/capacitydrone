@@ -1,4 +1,6 @@
 import Navigation from './components/Navigation';
+import ScrollArrow from './components/ScrollArrow';
+import Link from 'next/link';
 
 const Home = () => {
 
@@ -37,19 +39,26 @@ const Home = () => {
               inspections industrielles, cartographie, surveillance, détection thermique et bien plus.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-              <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-                Découvrir nos services
-              </button>
-              <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all border border-blue-500/20 hover:border-blue-500/40">
-                En savoir plus
-              </button>
+              <Link href="/inspection-drones">
+                <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
+                  Découvrir nos services
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all border border-blue-500/20 hover:border-blue-500/40">
+                  En savoir plus
+                </button>
+              </Link>
             </div>
           </div>
         </div>
+
+        {/* Ajout de la flèche de défilement */}
+        <ScrollArrow />
       </section>
 
-      {/* Drones Section */}
-      <section className="py-16">
+      {/* Drones Section - Ajout de l'ID */}
+      <section id="drones-section" className="py-16">
         <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl md:text-7xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Nos Drones
@@ -168,12 +177,16 @@ const Home = () => {
             Contactez CAPACITY DRONE dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-              Demander un devis
-            </button>
-            <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all border border-blue-500/20 hover:border-blue-500/40">
-              Nous contacter
-            </button>
+            <Link href="/devis">
+              <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
+                Demander un devis
+              </button>
+            </Link>
+            <Link href="/contact">
+              <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all border border-blue-500/20 hover:border-blue-500/40">
+                Nous contacter
+              </button>
+            </Link>
           </div>
         </div>
       </section>

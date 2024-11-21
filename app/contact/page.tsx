@@ -36,7 +36,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <ScrollArrow />
+          <ScrollArrow targetId="contact-form" />
         </section>
 
         {/* Contact Form Section */}

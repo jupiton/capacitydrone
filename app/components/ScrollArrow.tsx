@@ -2,9 +2,13 @@
 
 import React from 'react';
 
-const ScrollArrow = () => {
-  const scrollToForm = () => {
-    document.getElementById('contact-form')?.scrollIntoView({ 
+interface ScrollArrowProps {
+  targetId?: string;
+}
+
+const ScrollArrow = ({ targetId = 'drones-section' }: ScrollArrowProps) => {
+  const scrollToSection = () => {
+    document.getElementById(targetId)?.scrollIntoView({ 
       behavior: 'smooth' 
     });
   };
@@ -12,7 +16,7 @@ const ScrollArrow = () => {
   return (
     <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
       <button 
-        onClick={scrollToForm}
+        onClick={scrollToSection}
         className="cursor-pointer"
       >
         <div className="animate-bounce bg-white/10 backdrop-blur-sm p-2 rounded-full hover:bg-white/20 transition-all">
