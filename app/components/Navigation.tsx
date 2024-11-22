@@ -9,10 +9,10 @@ export default function Navigation() {
           {/* Logo avec taille maximale */}
           <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="/logo1.svg"
+              src="/logoinsk.svg"
               alt="Capacity Drone Logo"
-              width={1200}
-              height={1200}
+              width={40}
+              height={40}
               className="w-40 h-40 -my-10"
             />
           </Link>
