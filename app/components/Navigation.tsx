@@ -5,17 +5,16 @@ export default function Navigation() {
   return (
     <nav className="fixed w-full z-50 bg-black/30 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-20">
+          {/* Logo avec taille maximale */}
           <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="/logo.svg"
+              src="/logo1.svg"
               alt="Capacity Drone Logo"
-              width={40}
-              height={40}
-              className="w-10 h-10"
+              width={1200}
+              height={1200}
+              className="w-40 h-40 -my-10"
             />
-            <span className="text-xl font-bold text-white">CAPACITY DRONE</span>
           </Link>
 
           {/* Navigation Links */}

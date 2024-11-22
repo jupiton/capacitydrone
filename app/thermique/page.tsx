@@ -3,17 +3,26 @@ import Link from 'next/link';
 const ThermalInspectionDetailed  = () => {
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section avec vidéo */}
       <Navigation />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
+          {/* Vidéo en arrière-plan */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source 
+              src="https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/photovoltaique.mp4" 
+              type="video/mp4" 
+            />
+          </video>
+          
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <img
-            src="/api/placeholder/1920/1080"
-            alt="Thermal Drone Inspection"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
+          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-blue-900/20 to-black"></div>
         </div>
 
         <div className="relative z-30 max-w-6xl mx-auto px-4 text-center">

@@ -1,104 +1,92 @@
-import Navigation from '../../components/Navigation'
+'use client'
 
-const TelecomDroneApplications = () => {
-  const examples = [
-    {
-      image: "/api/placeholder/1920/1080",
-      legend: "Inspection d&apos;un site de télécommunication avec drone"
-    },
-    {
-      image: "/api/placeholder/1920/1080",
-      legend: "Création de jumeaux numériques 360° pour visualisation"
-    },
-    {
-      image: "/api/placeholder/1920/1080",
-      legend: "Maintenance prédictive grâce aux données des drones"
-    }
-  ];
+import { useState, useEffect } from 'react';
+import Navigation from '../../components/Navigation'
+import Link from 'next/link';
+
+const images = [
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/te%CC%81le%CC%81communication1.png",
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/te%CC%81le%CC%81communication2.png",
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/te%CC%81le%CC%81communication3.png",
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/te%CC%81le%CC%81communication4.png"
+];
+
+const TelecommunicationPage = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
-      {/* Hero Section */}
       <Navigation />
+      {/* Hero Section avec carrousel */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
+          {/* Carrousel en arrière-plan */}
+          <div className="relative h-full w-full">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Télécommunication ${index + 1}`}
+                className={`absolute w-full h-full object-cover transition-all duration-1000 ease-in-out transform
+                  ${index === currentImageIndex 
+                    ? 'opacity-100 scale-100' 
+                    : 'opacity-0 scale-110'
+                  }`}
+              />
+            ))}
+          </div>
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <img
-            src="/api/placeholder/1920/1080"
-            alt="Télécommunication Drone Applications"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
+          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-blue-900/20 to-black"></div>
         </div>
 
+        {/* Contenu du hero */}
         <div className="relative z-30 max-w-6xl mx-auto px-4 text-center">
           <div className="space-y-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
-              Télécommunication Visée FH & Jumeaux Numériques Panoramiques 360° par Drone
+              Inspection Télécommunication
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-              La télécommunication visée FH (Fréquences Hautes) et la création de jumeaux numériques panoramiques à 360° par drone sont des technologies avancées qui permettent d&apos;optimiser l&apos;infrastructure des réseaux de télécommunications et de faciliter la gestion et la maintenance des sites.
+              Inspectez vos antennes et infrastructures de télécommunication avec précision grâce à nos solutions par drone.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Explication Section */}
-      <section className="py-16 bg-gray-900/50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-blue-400">Explications des Technologies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-gray-400 mb-4">
-                La &quot;visée FH&quot; fait référence à la mise en place et à l&apos;alignement des liens de communication à haute fréquence, essentiels pour les réseaux de données, notamment dans les zones éloignées ou difficiles d&apos;accès. Les drones permettent d&apos;assurer un alignement précis des antennes, de surveiller à distance les sites de transmission et de collecter des données techniques.
-              </p>
-              <p className="text-gray-400">
-                Les jumeaux numériques panoramiques 360° créés à partir de données de drones offrent une visualisation et une simulation en temps réel des sites, facilitant l&apos;analyse et la gestion des infrastructures de télécommunications.
-              </p>
-            </div>
-            <div>
-              <p className="text-gray-400 mb-4">
-                Ces technologies combinées permettent une meilleure gestion des infrastructures, une installation plus précise des équipements, une maintenance prédictive et une optimisation du déploiement des réseaux.
-              </p>
-              <p className="text-gray-400">
-                Les principaux avantages sont l&apos;efficacité, la réduction des coûts, l&apos;accessibilité à des zones difficiles et la qualité des données collectées, offrant ainsi une gestion plus efficace et une meilleure anticipation des problèmes.
-              </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+              <Link href="/devis">
+                <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
+                  Demander un devis
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all border border-blue-500/20 hover:border-blue-500/40">
+                  Nous contacter
+                </button>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Exemples Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-blue-400">Exemples de Réalisations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {examples.map((example, index) => (
-              <div key={index} className="text-center">
-                <img src={example.image} alt={`Exemple ${index + 1}`} className="rounded-xl" />
-                <p className="text-gray-400 mt-2">{example.legend}</p>
-              </div>
+          {/* Indicateurs de slide */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 
+                  ${index === currentImageIndex 
+                    ? 'bg-blue-500 w-8' 
+                    : 'bg-white/50 hover:bg-white/80'
+                  }`}
+                aria-label={`Aller à l'image ${index + 1}`}
+              />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Conclusion Section */}
-      <section className="py-16 text-center bg-gray-900/50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-blue-400">
-            Des Solutions Complètes pour les Télécommunications
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            L&apos;inspection par drone et la création de jumeaux numériques panoramiques 360° sont des outils puissants pour les opérateurs de télécommunications souhaitant optimiser la gestion et la maintenance de leurs infrastructures. Grâce à ces technologies, les entreprises peuvent améliorer la qualité de service et garantir la pérennité de leurs installations, tout en restant compétitives dans un secteur en constante évolution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-              Découvrir les solutions
-            </button>
-            <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
-              Demander un devis
-            </button>
           </div>
         </div>
       </section>
@@ -106,4 +94,4 @@ const TelecomDroneApplications = () => {
   );
 };
 
-export default TelecomDroneApplications;
+export default TelecommunicationPage;
