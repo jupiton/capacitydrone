@@ -1,22 +1,56 @@
+'use client'
+
+import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
 import Link from 'next/link';
 
+const images = [
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection1.png",
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection2.png",
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection3.png",
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection4.png"
+];
+
 const DroneInspection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
       <Navigation />
-      {/* Hero Section */}
+      {/* Hero Section avec carrousel */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
+          {/* Carrousel en arrière-plan */}
+          <div className="relative h-full w-full">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Inspection ${index + 1}`}
+                className={`absolute w-full h-full object-cover transition-all duration-1000 ease-in-out transform
+                  ${index === currentImageIndex 
+                    ? 'opacity-100 scale-100' 
+                    : 'opacity-0 scale-105'}`}
+              />
+            ))}
+          </div>
+          
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <img
-            src="/api/placeholder/1920/1080"
-            alt="Inspection par Drone"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
+          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-blue-900/20 to-black"></div>
         </div>
 
+        {/* Contenu du hero */}
         <div className="relative z-30 max-w-6xl mx-auto px-4 text-center">
           <div className="space-y-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
@@ -38,10 +72,24 @@ const DroneInspection = () => {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Indicateur de défilement */}
-      <a href="#process" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+        {/* Indicateurs de slide */}
+        <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-30 flex space-x-3">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 
+                ${index === currentImageIndex 
+                  ? 'bg-blue-500 w-8' 
+                  : 'bg-white/50 hover:bg-white/80'}`}
+              aria-label={`Aller à l'image ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Indicateur de défilement */}
+        <a href="#process" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
           <div className="animate-bounce bg-white/10 backdrop-blur-sm p-2 rounded-full">
             <svg
               className="w-6 h-6 text-blue-400"
@@ -58,6 +106,7 @@ const DroneInspection = () => {
             </svg>
           </div>
         </a>
+      </section>
 
       {/* Process Section */}
       <section id="process" className="py-16 bg-gray-900/50">

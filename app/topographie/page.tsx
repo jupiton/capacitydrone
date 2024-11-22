@@ -39,9 +39,8 @@ const TopographiePage = () => {
             ))}
           </div>
           
-          {/* Overlays */}
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
+          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-blue-900/20 to-black"></div>
         </div>
 
         {/* Contenu du hero */}
