@@ -8,7 +8,8 @@ const images = [
   "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection1.png",
   "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection2.png",
   "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection3.png",
-  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection4.png"
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection4.png",
+  "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection5.png"
 ];
 
 const DroneInspection = () => {

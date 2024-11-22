@@ -19,6 +19,10 @@ const TopographiePage = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const goToSlide = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
       <Navigation />
@@ -32,9 +36,10 @@ const TopographiePage = () => {
                 key={index}
                 src={image}
                 alt={`Topographie ${index + 1}`}
-                className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
-                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                }`}
+                className={`absolute w-full h-full object-cover transition-all duration-1000 ease-in-out transform
+                  ${index === currentImageIndex 
+                    ? 'opacity-100 scale-100' 
+                    : 'opacity-0 scale-105'}`}
               />
             ))}
           </div>
@@ -65,6 +70,21 @@ const TopographiePage = () => {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Indicateurs de slide */}
+        <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-30 flex space-x-3">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 
+                ${index === currentImageIndex 
+                  ? 'bg-blue-500 w-8' 
+                  : 'bg-white/50 hover:bg-white/80'}`}
+              aria-label={`Aller à l'image ${index + 1}`}
+            />
+          ))}
         </div>
 
         {/* Indicateur de défilement */}
