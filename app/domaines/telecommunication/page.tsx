@@ -59,7 +59,7 @@ const TelecommunicationPage = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Inspectez vos antennes et infrastructures de télécommunication avec précision grâce à nos solutions par drone.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8 mb-8">
               <Link href="/devis">
                 <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
                   Demander un devis
@@ -71,22 +71,22 @@ const TelecommunicationPage = () => {
                 </button>
               </Link>
             </div>
-          </div>
 
-          {/* Indicateurs de slide */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 
-                  ${index === currentImageIndex 
-                    ? 'bg-blue-500 w-8' 
-                    : 'bg-white/50 hover:bg-white/80'
-                  }`}
-                aria-label={`Aller à l'image ${index + 1}`}
-              />
-            ))}
+            {/* Indicateurs de slide - Déplacé ici */}
+            <div className="flex justify-center space-x-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 
+                    ${index === currentImageIndex 
+                      ? 'bg-blue-500 w-8' 
+                      : 'bg-white/50 hover:bg-white/80'
+                    }`}
+                  aria-label={`Aller à l'image ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
