@@ -110,7 +110,7 @@ const TopographiePage = () => {
       {/* Services Section */}
       <section id="services" className="py-16 bg-gray-900/50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-blue-400">Nos Services de Topographie</h2>
+          <h2 className="text-3xl font-bold mb-12 text-blue-400 text-center">Nos Services de Topographie</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -144,14 +144,14 @@ const TopographiePage = () => {
                 ]
               }
             ].map((service, index) => (
-              <div key={index} className="bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm border border-blue-500/10 hover:border-blue-500/30 transition-all">
+              <div key={index} className="p-6 border border-blue-500/20 rounded-xl backdrop-blur-sm hover:border-blue-500/40 transition-all flex flex-col items-center text-center">
                 <h3 className="text-xl font-semibold mb-3 text-blue-300">{service.title}</h3>
                 <p className="text-gray-400 mb-4">{service.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 text-left w-full">
                   {service.details.map((detail, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-gray-400">
                       <svg
-                        className="w-5 h-5 text-blue-400 mt-1"
+                        className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -163,7 +163,7 @@ const TopographiePage = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      {detail}
+                      <span>{detail}</span>
                     </li>
                   ))}
                 </ul>
@@ -176,7 +176,7 @@ const TopographiePage = () => {
       {/* Applications Section */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-blue-400">Applications</h2>
+          <h2 className="text-3xl font-bold mb-12 text-blue-400 text-center">Applications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -214,20 +214,18 @@ const TopographiePage = () => {
                 description: "Documentation et préservation du patrimoine architectural et historique.",
                 applications: [
                   "Modélisation de monuments",
-                  "Documentation historique",
-                  "Plans de restauration",
                   "Archives numériques"
                 ]
               }
             ].map((app, index) => (
-              <div key={index} className="p-6 border border-blue-500/20 rounded-xl backdrop-blur-sm hover:border-blue-500/40 transition-all">
+              <div key={index} className="p-6 border border-blue-500/20 rounded-xl backdrop-blur-sm hover:border-blue-500/40 transition-all flex flex-col items-center text-center">
                 <h3 className="text-xl font-semibold mb-3 text-blue-300">{app.title}</h3>
                 <p className="text-gray-400 mb-4">{app.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 text-left w-full">
                   {app.applications.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-gray-400">
                       <svg
-                        className="w-5 h-5 text-blue-400 mt-1"
+                        className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -239,7 +237,7 @@ const TopographiePage = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
