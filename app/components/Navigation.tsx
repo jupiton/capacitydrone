@@ -10,7 +10,7 @@ export default function Navigation() {
           <div className="flex-1 flex items-center justify-center sm:justify-start">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo12.svg"
+                src="/logo13.svg"
                 alt="Capacity Drone Logo"
                 width={40}
                 height={40}
