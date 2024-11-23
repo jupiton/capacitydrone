@@ -2,6 +2,8 @@ import Navigation from './components/Navigation';
 import ScrollArrow from './components/ScrollArrow';
 import Link from 'next/link';
 import SectorCard from './components/SectorCard';
+import Image from 'next/image';
+import Footer from './components/Footer';
 
 const Home = () => {
 
@@ -294,6 +296,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

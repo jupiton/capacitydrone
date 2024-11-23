@@ -181,7 +181,6 @@ const TopographiePage = () => {
             {[
               {
                 title: "Études Géographiques",
-                description: "Analyses topographiques détaillées pour la planification et l'aménagement du territoire.",
                 applications: [
                   "Études d'impact environnemental",
                   "Planification urbaine",
@@ -191,7 +190,6 @@ const TopographiePage = () => {
               },
               {
                 title: "Projets d'Aménagement",
-                description: "Visualisation 3D pour l'urbanisme et le développement immobilier.",
                 applications: [
                   "Modélisation de projets",
                   "Études de faisabilité",
@@ -201,7 +199,6 @@ const TopographiePage = () => {
               },
               {
                 title: "Gestion de Sites",
-                description: "Suivi et gestion des chantiers et sites industriels complexes.",
                 applications: [
                   "Surveillance de l'évolution",
                   "Calculs de volumes",
@@ -211,7 +208,6 @@ const TopographiePage = () => {
               },
               {
                 title: "Patrimoine",
-                description: "Documentation et préservation du patrimoine architectural et historique.",
                 applications: [
                   "Modélisation de monuments",
                   "Archives numériques"
@@ -220,7 +216,6 @@ const TopographiePage = () => {
             ].map((app, index) => (
               <div key={index} className="p-6 border border-blue-500/20 rounded-xl backdrop-blur-sm hover:border-blue-500/40 transition-all flex flex-col items-center text-center">
                 <h3 className="text-xl font-semibold mb-3 text-blue-300">{app.title}</h3>
-                <p className="text-gray-400 mb-4">{app.description}</p>
                 <ul className="space-y-2 text-left w-full">
                   {app.applications.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-gray-400">
