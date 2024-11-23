@@ -1,5 +1,6 @@
 import Navigation from '../components/Navigation';
 import Link from 'next/link';
+import ActionButtons from '../components/ActionButtons';
 const ThermalInspectionDetailed  = () => {
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
@@ -36,17 +37,7 @@ const ThermalInspectionDetailed  = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Une approche innovante et efficace pour évaluer l&apos;état de vos infrastructures et détecter rapidement toute anomalie, sans mobilisation d&apos;équipes au sol.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-              <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-                Découvrir nos solutions
-              </button>
-              <Link 
-                href="/devis" 
-                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all"
-              >
-                Demander un devis
-              </Link>
-            </div>
+            <ActionButtons/>
           </div>
         </div>
       </section>
@@ -229,14 +220,7 @@ const ThermalInspectionDetailed  = () => {
           <p className="text-xl text-gray-400 mb-8">
             Notre solution d&apos;inspection par drone et caméra thermique offre une approche moderne, rapide et précise pour garantir la performance et la sécurité de vos installations. Grâce à nos rapports détaillés, prenez des décisions éclairées pour l&apos;entretien et l&apos;optimisation de vos équipements.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-              Planifier une inspection
-            </button>
-            <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
-              Contacter nos experts
-            </button>
-          </div>
+          <ActionButtons/>
         </div>
       </section>
     </div>

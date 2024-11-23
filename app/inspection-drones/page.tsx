@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
+import ActionButtons from '../components/ActionButtons';
 import Link from 'next/link';
 
 const images = [
@@ -60,17 +61,7 @@ const DroneInspection = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Une technique moderne permettant d&apos;effectuer des vérifications visuelles et techniques sur des structures ou des sites difficiles d&apos;accès, tout en garantissant une sécurité accrue et des coûts réduits.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-              <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-                Découvrir nos services
-              </button>
-              <Link 
-                href="/devis" 
-                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all"
-              >
-                Demander un devis
-              </Link>
-            </div>
+            <ActionButtons/>
           </div>
         </div>
 
@@ -212,14 +203,7 @@ const DroneInspection = () => {
           <p className="text-xl text-gray-400 mb-8">
             L&apos;inspection par drone est une méthode efficace, rapide et sécuritaire pour effectuer des contrôles réguliers et des évaluations détaillées. Grâce à cette technologie, les entreprises peuvent réduire leurs coûts d&apos;entretien, détecter les problèmes à un stade précoce, et garantir une gestion proactive de leurs infrastructures.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-              Demander un devis
-            </button>
-            <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
-              En savoir plus
-            </button>
-          </div>
+          <ActionButtons/>
         </div>
       </section>
     </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
+import ActionButtons from '../components/ActionButtons';
 import Link from 'next/link';
 
 const images = [
@@ -59,17 +60,7 @@ const TelecomDroneApplications = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               La télécommunication visée FH (Fréquences Hautes) et la création de jumeaux numériques panoramiques à 360° par drone sont des technologies avancées qui permettent d&apos;optimiser l&apos;infrastructure des réseaux de télécommunications.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-              <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-                Découvrir les solutions
-              </button>
-              <Link 
-                href="/devis" 
-                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all"
-              >
-                Demander un devis
-              </Link>
-            </div>
+            <ActionButtons/>
           </div>
         </div>
 
@@ -146,17 +137,7 @@ const TelecomDroneApplications = () => {
           <p className="text-xl text-gray-400 mb-8">
             L&apos;inspection par drone et la création de jumeaux numériques panoramiques 360° sont des outils puissants pour les opérateurs de télécommunications souhaitant optimiser la gestion et la maintenance de leurs infrastructures. Grâce à ces technologies, les entreprises peuvent améliorer la qualité de service et garantir la pérennité de leurs installations, tout en restant compétitives dans un secteur en constante évolution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-              Découvrir les solutions
-            </button>
-            <Link 
-              href="/devis" 
-              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all"
-            >
-              Demander un devis
-            </Link>
-          </div>
+          <ActionButtons/>
         </div>
       </section>
     </div>

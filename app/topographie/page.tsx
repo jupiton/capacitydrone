@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
 import Link from 'next/link';
+import ActionButtons from '../components/ActionButtons';
 
 const images = [
   "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/topographie1.jpg",
@@ -58,17 +59,7 @@ const TopographiePage = () => {
               Création de cartes précises et modèles 3D haute définition grâce à nos drones équipés 
               des dernières technologies de capture d&apos;images aériennes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-              <Link 
-                href="/devis" 
-                className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
-              >
-                Demander un devis
-              </Link>
-              <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
-                En savoir plus
-              </button>
-            </div>
+            c
           </div>
         </div>
 
@@ -331,17 +322,7 @@ const TopographiePage = () => {
             Découvrez la précision et la qualité de nos services de topographie et modélisation 3D.
             Nos experts sont là pour vous accompagner dans la réalisation de vos projets.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/devis" 
-              className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
-            >
-              Demander un devis
-            </Link>
-            <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
-              En savoir plus
-            </button>
-          </div>
+          <ActionButtons />
         </div>
       </section>
       <div id="bas">
