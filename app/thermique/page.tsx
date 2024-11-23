@@ -43,7 +43,7 @@ const ThermalInspectionDetailed  = () => {
       </section>
 
       {/* Indicateur de défilement */}
-      <a href="#process" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+      <a href="#services" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
         <div className="animate-bounce bg-white/10 backdrop-blur-sm p-2 rounded-full">
           <svg
             className="w-6 h-6 text-blue-400"
@@ -61,8 +61,8 @@ const ThermalInspectionDetailed  = () => {
         </div>
       </a>
 
-      {/* Technology Section */}
-      <section className="py-16 bg-gray-900/50">
+      {/* Services Section */}
+      <section id="services" className="py-16 bg-gray-900/50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-blue-400">Technologies d&apos;Inspection Avancées</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
