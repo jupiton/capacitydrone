@@ -57,17 +57,17 @@ const Home = () => {
       </section>
 
       {/* Nos Drones Section */}
-      <section className="py-16 bg-gray-900/50">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="py-8 bg-gray-900/50">
+        <div className="max-w-full mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Notre Flotte de Drones
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex flex-nowrap overflow-x-auto gap-4 pb-4 justify-center">
             {[
               {
                 title: "Matrice 350 RTK",
                 subtitle: "Précision et robustesse",
-                image: "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection1.png",
+                image: "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/350RTK.png",
                 description: "L'un des drones les plus avancés de DJI, conçu pour des missions complexes dans des environnements extrêmes.",
                 features: [
                   "Inspections de grande envergure",
@@ -79,7 +79,7 @@ const Home = () => {
               {
                 title: "Mavic 3 Enterprise",
                 subtitle: "Polyvalence et performance",
-                image: "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection2.png",
+                image: "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/mavic3ent.png",
                 description: "Drone professionnel polyvalent, compact et ultra-performant pour des missions variées.",
                 features: [
                   "Inspection de bâtiments",
@@ -91,7 +91,7 @@ const Home = () => {
               {
                 title: "Mavic 3 Thermal",
                 subtitle: "Détection thermique avancée",
-                image: "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/inspection3.png",
+                image: "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/mavic3termal.png",
                 description: "Spécialement conçu pour l'analyse thermique de haute précision.",
                 features: [
                   "Surveillance thermique",
@@ -101,16 +101,18 @@ const Home = () => {
                 ]
               }
             ].map((drone, index) => (
-              <div key={index} className="group bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm border border-blue-500/10 hover:border-blue-500/30 transition-all">
-                <h3 className="text-xl font-bold mb-2 text-blue-300">{drone.title}</h3>
-                <p className="text-lg text-blue-300/80 mb-4">{drone.subtitle}</p>
-                <img
-                  src={drone.image}
-                  alt={drone.title}
-                  className="w-full h-64 object-cover rounded-lg mb-4 transform transition-transform group-hover:scale-105"
-                />
-                <p className="text-gray-400 mb-4">{drone.description}</p>
-                <ul className="space-y-2">
+              <div key={index} className="flex-none w-[400px] h-[600px] group bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm border border-blue-500/10 hover:border-blue-500/30 transition-all flex flex-col">
+                <h3 className="text-xl font-bold mb-2 text-blue-300 h-[32px] overflow-hidden">{drone.title}</h3>
+                <p className="text-lg text-blue-300/80 mb-4 h-[28px] overflow-hidden">{drone.subtitle}</p>
+                <div className="h-[200px] mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src={drone.image}
+                    alt={drone.title}
+                    className="w-full h-full object-cover transform transition-transform group-hover:scale-105"
+                  />
+                </div>
+                <p className="text-gray-400 mb-4 h-[48px] overflow-hidden">{drone.description}</p>
+                <ul className="space-y-2 flex-grow">
                   {drone.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-gray-400">
                       <svg
@@ -137,7 +139,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-900/50">
+      <section id="services" className="py-8 bg-gray-900/50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Nos Services
@@ -154,7 +156,7 @@ const Home = () => {
                 title: "Topographie & Modélisation",
                 description: "Cartographie et modélisation 3D de haute précision",
                 href: "/topographie",
-                path: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
+                path: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
               },
               {
                 title: "Thermique & Énergie",
@@ -206,7 +208,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-gray-900/50">
+      <section className="py-8 bg-gray-900/50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Pourquoi choisir Capacity Drone ?
@@ -271,7 +273,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 text-center">
+      <section className="py-8 text-center">
         <div className="max-w-4xl mx-auto px-4">
         <h2 className=" md:text-4xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Prêt à découvrir nos services ?
