@@ -275,19 +275,17 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="py-8 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-        <h2 className=" md:text-4xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="md:text-4xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Prêt à découvrir nos services ?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
             Contactez CAPACITY DRONE dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé.
           </p>
+          <p className="text-xl text-gray-400 mb-8">
+            Nous rayonnons sur la France entière pour répondre à vos projets. Nous pouvons également nous déplacer à l'étranger.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/devis">
-              <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-                Demander un devis
-              </button>
-            </Link>
             <Link href="/contact">
               <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all border border-blue-500/20 hover:border-blue-500/40">
                 Nous contacter

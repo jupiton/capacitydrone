@@ -30,9 +30,6 @@ const ContactPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <ScrollButton />
-              <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
-                En savoir plus
-              </button>
             </div>
           </div>
 
@@ -75,14 +72,6 @@ const ContactPage = () => {
                     ))}
                   </div>
                 </div>
-  
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-bold text-blue-400">Horaires d&apos;ouverture</h2>
-                  <p className="text-gray-400">
-                    Lundi - Vendredi : 9h00 - 18h00<br />
-                    Weekend : Sur rendez-vous
-                  </p>
-                </div>
               </div>
   
               {/* Contact Form */}
@@ -95,6 +84,24 @@ const ContactPage = () => {
                       type="text"
                       className="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-blue-500/20 focus:border-blue-500 focus:outline-none text-white"
                       placeholder="Votre nom"
+                    />
+                  </div>
+  
+                  <div className="space-y-2">
+                    <label className="text-sm text-gray-300">Nom de l'entreprise</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-blue-500/20 focus:border-blue-500 focus:outline-none text-white"
+                      placeholder="Nom de votre entreprise"
+                    />
+                  </div>
+  
+                  <div className="space-y-2">
+                    <label className="text-sm text-gray-300">SIRET</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-blue-500/20 focus:border-blue-500 focus:outline-none text-white"
+                      placeholder="Numéro SIRET de l'entreprise"
                     />
                   </div>
   

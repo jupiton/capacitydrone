@@ -249,17 +249,17 @@ const TopographiePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                value: "2cm/px",
+                value: "de 1 à 5 cm/px",
                 label: "Résolution",
                 detail: "Précision exceptionnelle pour des détails nets et une cartographie ultra-précise de vos terrains"
               },
               {
-                value: "99%",
+                value: "99% ppk/rtk",
                 label: "Précision",
                 detail: "Mesures fiables et exactes garantissant une qualité professionnelle pour vos projets"
               },
               {
-                value: "4K",
+                value: "4K/8k",
                 label: "Qualité Vidéo",
                 detail: "Images ultra-haute définition permettant une analyse détaillée de chaque élément"
               }
