@@ -31,10 +31,9 @@ const Home = () => {
         {/* Hero Content */}
         <div className="relative z-30 max-w-6xl mx-auto px-4 text-center">
           <div className="space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 inline-block bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
-                CAPACITY DRONE
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 inline-block bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
+              L'accès à l'inaccessible
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-300">L'accès à l'inaccessible</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Votre partenaire expert en solutions de drones professionnelles pour des missions variées : 
               inspections industrielles, cartographie, surveillance, détection thermique et bien plus.
