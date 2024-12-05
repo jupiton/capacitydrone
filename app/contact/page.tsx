@@ -11,14 +11,23 @@ const ContactPage = () => {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center">
           {/* Background Image */}
-          <div className="absolute inset-0 z-0 bg-gray-800">
-            <img
-              src="/api/placeholder/1920/1080"
-              alt="Contact"
-              className="w-full h-full object-cover opacity-40"
+          <div className="absolute inset-0 z-0">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source 
+              src="https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/linkedin.mp4" 
+              type="video/mp4" 
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900"></div>
-          </div>
+          </video>
+          
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-blue-900/20 to-black"></div>
+        </div>
           
           {/* Hero Content */}
           <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
@@ -131,6 +140,7 @@ const ContactPage = () => {
                       <option value="cartographie">Cartographie et Modélisation 3D</option>
                       <option value="thermique">Détection Thermique</option>
                       <option value="securite">Sécurité & Intervention d&apos;Urgence</option>
+                      <option value="autre">Autres</option>
                     </select>
                   </div>
   

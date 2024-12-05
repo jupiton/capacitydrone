@@ -58,7 +58,7 @@ const Home = () => {
       </section>
 
       {/* Nos Drones Section */}
-      <section className="py-8 bg-gray-900/50">
+      <section  id="section-detail" className="py-8 bg-gray-900/50">
         <div className="max-w-full mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-blue-400 [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Notre Flotte de Drones

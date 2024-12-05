@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
 import ActionButtons from '../components/ActionButtons';
+import ScrollArrow from '../components/ScrollArrow';
 import Link from 'next/link';
 
 const images = [
@@ -82,27 +83,11 @@ const SuiviChantierPage = () => {
         </div>
 
         {/* Indicateur de défilement */}
-        <a href="#services" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-          <div className="animate-bounce bg-white/10 backdrop-blur-sm p-2 rounded-full">
-            <svg
-              className="w-6 h-6 text-blue-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </a>
+        <ScrollArrow />
       </section>
 
       {/* Fonctionnement Section */}
-      <section id="services" className="py-16">
+      <section id="section-detail" className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-blue-400">Fonctionnement du Suivi de Chantier par Drone</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

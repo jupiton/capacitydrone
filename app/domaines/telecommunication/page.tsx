@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Navigation from '../../components/Navigation'
 import Link from 'next/link';
+import ScrollArrow from '../../components/ScrollArrow';
 
 const images = [
   "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/te%CC%81le%CC%81communication1.png",
@@ -71,28 +72,13 @@ const TelecommunicationPage = () => {
                 </button>
               </Link>
             </div>
-
-            {/* Indicateurs de slide - Déplacé ici */}
-            <div className="flex justify-center space-x-2">
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 
-                    ${index === currentImageIndex 
-                      ? 'bg-blue-500 w-8' 
-                      : 'bg-white/50 hover:bg-white/80'
-                    }`}
-                  aria-label={`Aller à l'image ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
         </div>
+        <ScrollArrow />
       </section>
 
       {/* Process Section */}
-      <section id="process" className="py-16 bg-gray-900/50">
+      <section id="section-detail" className="py-16 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-blue-400 text-center">Télécommunication Visée FH (Fréquences Hautes) par Drone</h2>
           <div className="max-w-5xl mx-auto">

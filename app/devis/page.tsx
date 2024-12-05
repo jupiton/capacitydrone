@@ -8,13 +8,22 @@ const DevisPage = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-gray-800">
-          <img
-            src="/api/placeholder/1920/1080"
-            alt="Devis"
-            className="w-full h-full object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900"></div>
+        <div className="absolute inset-0 z-0">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source 
+              src="https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/linkedin.mp4" 
+              type="video/mp4" 
+            />
+          </video>
+          
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+          <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent via-blue-900/20 to-black"></div>
         </div>
         
         {/* Hero Content */}
@@ -130,18 +139,6 @@ const DevisPage = () => {
                   type="date"
                   className="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-blue-500/20 focus:border-blue-500 focus:outline-none text-white"
                 />
-              </div>
-
-              {/* Budget */}
-              <div className="space-y-2">
-                <label className="text-sm text-gray-300">Budget estimé</label>
-                <select className="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-blue-500/20 focus:border-blue-500 focus:outline-none text-white">
-                  <option value="">Sélectionnez une fourchette de budget</option>
-                  <option value="small">Moins de 1000€</option>
-                  <option value="medium">1000€ - 5000€</option>
-                  <option value="large">5000€ - 10000€</option>
-                  <option value="xlarge">Plus de 10000€</option>
-                </select>
               </div>
 
               {/* Submit Button */}

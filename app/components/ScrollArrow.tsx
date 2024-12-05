@@ -6,7 +6,7 @@ interface ScrollArrowProps {
   targetId?: string;
 }
 
-const ScrollArrow = ({ targetId = 'drones-section' }: ScrollArrowProps) => {
+const ScrollArrow = ({ targetId = 'section-detail' }: ScrollArrowProps) => {
   const scrollToSection = () => {
     document.getElementById(targetId)?.scrollIntoView({ 
       behavior: 'smooth' 
