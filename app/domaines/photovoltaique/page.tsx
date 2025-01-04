@@ -2,6 +2,7 @@
 
 import Navigation from '../../components/Navigation'
 import ScrollArrow from '../../components/ScrollArrow';
+import ActionButtons from '../../components/ActionButtons';
 
 const ThermalInspectionExplained = () => {
   const examples = [
@@ -91,14 +92,7 @@ const ThermalInspectionExplained = () => {
           <p className="text-xl text-gray-400 mb-8">
             L&apos;inspection de centrales photovoltaïques, ombrières et toitures par drone avec caméra thermique est une solution moderne, rapide et précise qui vous permettra de détecter les problèmes, d&apos;améliorer la maintenance et de réduire les coûts à long terme. Découvrez comment cette approche peut bénéficier à vos installations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-              En savoir plus
-            </button>
-            <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
-              Demander un devis
-            </button>
-          </div>
+          <ActionButtons/>
         </div>
       </section>
     </div>

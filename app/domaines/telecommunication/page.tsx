@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Navigation from '../../components/Navigation'
 import Link from 'next/link';
 import ScrollArrow from '../../components/ScrollArrow';
+import ActionButtons from '../../components/ActionButtons';
 
 const images = [
   "https://capacity-drone.s3.eu-west-3.amazonaws.com/capacity-drone/te%CC%81le%CC%81communication1.png",
@@ -60,18 +61,6 @@ const TelecommunicationPage = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Inspectez vos antennes et infrastructures de télécommunication avec précision grâce à nos solutions par drone.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8 mb-8">
-              <Link href="/devis">
-                <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-                  Demander un devis
-                </button>
-              </Link>
-              <Link href="/contact">
-                <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all border border-blue-500/20 hover:border-blue-500/40">
-                  Nous contacter
-                </button>
-              </Link>
-            </div>
           </div>
         </div>
         <ScrollArrow targetId="section-detail"/>
@@ -114,17 +103,7 @@ const TelecommunicationPage = () => {
           <p className="text-xl text-gray-400 mb-8">
             L&apos;inspection par drone et la création de jumeaux numériques panoramiques 360° sont des outils puissants pour les opérateurs de télécommunications souhaitant optimiser la gestion et la maintenance de leurs infrastructures. Grâce à ces technologies, les entreprises peuvent améliorer la qualité de service et garantir la pérennité de leurs installations, tout en restant compétitives dans un secteur en constante évolution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-              Découvrir les solutions
-            </button>
-            <Link 
-              href="/devis" 
-              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all"
-            >
-              Demander un devis
-            </Link>
-          </div>
+          <ActionButtons/>
         </div>
       </section>
     </div>
