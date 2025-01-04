@@ -44,7 +44,7 @@ const ThermalInspectionDetailed  = () => {
       </section>
 
       {/* Indicateur de défilement */}
-      <ScrollArrow />
+      <ScrollArrow targetId="section-detail"/>
 
       {/* Services Section */}
       <section id="section-detail" className="py-16 bg-gray-900/50">

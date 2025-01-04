@@ -80,7 +80,7 @@ const TopographiePage = () => {
         </div>
 
         {/* Indicateur de défilement */}
-        <ScrollArrow />
+        <ScrollArrow targetId="section-detail"/>
       </section>
 
       {/* Services Section */}

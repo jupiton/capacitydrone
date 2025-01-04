@@ -81,7 +81,7 @@ const DroneInspection = () => {
           ))}
         </div>
 
-        <ScrollArrow />
+        <ScrollArrow targetId="section-detail"/>
       </section>
 
       {/* Process Section */}

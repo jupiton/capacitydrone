@@ -61,15 +61,8 @@ const ChantierPage = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Suivez l'évolution de vos chantiers avec précision grâce à nos solutions de surveillance par drone
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-              <button className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105">
-                Découvrir nos solutions
-              </button>
-              <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg transition-all">
-                Demander un devis
-              </button>
-            </div>
           </div>
+          
         </div>
 
         {/* Indicateurs de slide */}
@@ -86,6 +79,7 @@ const ChantierPage = () => {
             />
           ))}
         </div>
+        <ScrollArrow targetId="section-detail"/>
       </section>
 
       {/* Explication Section */}

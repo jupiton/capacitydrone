@@ -54,7 +54,7 @@ const ThermalInspectionExplained = () => {
           </div>
         </div>
 
-        <ScrollArrow />
+        <ScrollArrow targetId="section-detail"/>
       </section>
 
       {/* Explication Section */}

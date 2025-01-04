@@ -83,7 +83,7 @@ const SuiviChantierPage = () => {
         </div>
 
         {/* Indicateur de défilement */}
-        <ScrollArrow />
+        <ScrollArrow targetId="section-detail"/>
       </section>
 
       {/* Fonctionnement Section */}

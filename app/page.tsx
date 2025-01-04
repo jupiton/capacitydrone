@@ -54,7 +54,7 @@ const Home = () => {
         </div>
 
         {/* Ajout de la flèche de défilement */}
-        <ScrollArrow />
+        <ScrollArrow targetId="section-detail"/>
       </section>
 
       {/* Nos Drones Section */}

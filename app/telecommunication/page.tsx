@@ -80,7 +80,7 @@ const TelecomDroneApplications = () => {
           ))}
         </div>
 
-        <ScrollArrow />
+        <ScrollArrow targetId="section-detail"/>
       </section>
 
       {/* Process Section */}

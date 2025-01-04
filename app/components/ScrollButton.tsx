@@ -3,18 +3,19 @@
 import React from 'react';
 
 const ScrollButton = () => {
-  const scrollToForm = () => {
-    document.getElementById('contact-form')?.scrollIntoView({ 
-      behavior: 'smooth' 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   };
 
   return (
-    <button 
-      onClick={scrollToForm}
+    <button
+      onClick={scrollToTop}
       className="bg-blue-500/80 backdrop-blur-sm hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
     >
-      Envoyer un message
+      Retour en haut
     </button>
   );
 };

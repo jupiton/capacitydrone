@@ -74,7 +74,7 @@ const TelecommunicationPage = () => {
             </div>
           </div>
         </div>
-        <ScrollArrow />
+        <ScrollArrow targetId="section-detail"/>
       </section>
 
       {/* Process Section */}
