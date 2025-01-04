@@ -7,6 +7,7 @@ import Image from 'next/image';
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isRealisationsOpen, setIsRealisationsOpen] = useState(false);
 
   return (
     <nav className="fixed w-full z-50 bg-black/30 backdrop-blur-sm border-b border-white/10">
@@ -186,36 +187,46 @@ export default function Navigation() {
 
               {/* Nos Réalisations avec sous-menu */}
               <div className="space-y-1">
-                <Link 
-                  href="/realisations" 
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700"
-                  onClick={() => setIsOpen(false)}
+                <button
+                  onClick={() => setIsRealisationsOpen(!isRealisationsOpen)}
+                  className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 rounded-md"
                 >
-                  Nos Réalisations
-                </Link>
-                <div className="pl-4 space-y-1">
-                  <Link 
-                    href="/domaines/telecommunication" 
-                    className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-700"
-                    onClick={() => setIsOpen(false)}
+                  <span>Nos Réalisations</span>
+                  <svg
+                    className={`h-4 w-4 transition-transform ${isRealisationsOpen ? 'transform rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    Télécommunication
-                  </Link>
-                  <Link 
-                    href="/domaines/photovoltaique" 
-                    className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-700"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Photovoltaïque
-                  </Link>
-                  <Link 
-                    href="/domaines/chantier" 
-                    className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-700"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Chantier
-                  </Link>
-                </div>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isRealisationsOpen && (
+                  <div className="pl-4 space-y-1">
+                    <Link 
+                      href="/domaines/telecommunication" 
+                      className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-700"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Télécommunication
+                    </Link>
+                    <Link 
+                      href="/domaines/photovoltaique" 
+                      className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-700"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Photovoltaïque
+                    </Link>
+                    <Link 
+                      href="/domaines/chantier" 
+                      className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-700"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Chantier
+                    </Link>
+                  </div>
+                )}
               </div>
               
               <Link 
